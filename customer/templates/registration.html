@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-image: linear-gradient( 112.1deg,  #202639 11.4%, rgba(63,76,119,1) 70.2% );">
+        <div class="container px-5 px-lg-5">
+            <a class="navbar-brand" href="#!"><h1 class="fw-bolder mt-3 text-white" style="font-family: 'Times New Roman', Times, serif;"><strong>FUTURE </strong><em>KART</em></h1></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+            <a class=" text-dark" href="{%url 'login'%}" ><h5>Login</h5></a>
+        </div>  
+    </nav>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-3"></div>
+            <div class="col-6 border" style="background-color: #FF9A8B; background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);">
+                <h2 class="text-center mt-5" style="color:#112066;"><strong>Registration</strong></h2>
+                <form action="" class="mt-5" method="post" enctype="multipart/form-data">
+                    {%csrf_token%}
+                    {{form.as_p}}
+
+                    <div class="mb-3 mt-5 text-center">
+                        <button type="submit" style="background-color: #FF9A8B;">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</body>
+</html>
